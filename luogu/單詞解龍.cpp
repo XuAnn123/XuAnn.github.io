@@ -22,33 +22,34 @@ return 0;
 }
 
 void dfs(string s,int num){
-		_max = max(_max,num);
-		int a;
-		for(int i=0;i<total;i++)
-				if(words[i].left > 0){
-						a = judge(s,words[i].str);
-						if(a>0){
-							words[i].left--;		
-							dfs(words[i].str,words[i].len+num-a);
-							words[i].left++;
-						}
-				}
+ _max = max(_max,num);
+ int a;
+ for(int i=0;i<total;i++)
+	if(words[i].left > 0){
+		a = judge(s,words[i].str);
+		if(a>0){
+			words[i].left--;		
+			dfs(words[i].str,words[i].len+num-a);
+			words[i].left++;
+		}
+	}
 }
 
 int main(){
 cin>>total;	
 for(int i=0;i<total;i++){
-		cin>>words[i].str;
-		words[i].len = (words[i].str).size();
+	cin>>words[i].str;
+	words[i].len = (words[i].str).size();
 }
 char st;
 cin>>st;
 for(int i=0;i<total;i++){
-		if(words[i].str[0] == st){
-			words[i].left--;
-			dfs(words[i].str,words[i].len);
-			words[i].left++;
+	if(words[i].str[0] == st){
+		words[i].left--;
+		dfs(words[i].str,words[i].len);
+		words[i].left++;
 		}		
 }		
-cout<<_max<<endl;	
+cout<<_max<<endl;
+return 0;
 }
