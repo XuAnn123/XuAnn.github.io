@@ -12,11 +12,10 @@ int judge(string a,string b){
 int lena = a.size();
 int lenb = b.size();
 for(int i=1;i<lena&&i<lenb;i++){
-		bool flag = true;
-		for(int j=0;j<i;j++)
-			if(a[lena-i+j] != b[j]) 
-				{flag = false;	break;}
-			if(flag) return i;
+	bool flag = true;
+	for(int j=0;j<i;j++)
+		if(a[lena-i+j] != b[j])	 {flag = false;	break;}
+		if(flag) return i;
 }
 return 0;
 }
