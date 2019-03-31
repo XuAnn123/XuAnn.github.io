@@ -4,6 +4,7 @@ using namespace std;
 int main(){
 	int n,i,k;
 	priority_queue <int,vector<int>,greater<int> > pq;
+		  //資料型態 儲存容器型態 比較方式
 	cin>>n;
 	for(i=0;i<n;i++){
 		cin>>k;
