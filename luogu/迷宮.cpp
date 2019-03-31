@@ -25,6 +25,7 @@ int main(){
 	for(int i=1;i<=n;i++)
 		for(int j=1;j<=m;j++)
 			visit[i][j] = 1;
+	cin>>sx>>sy>>fx>>fy;
 	
 	for(int i=0;i<t;i++){
 		int xxx,yyy;
@@ -37,8 +38,7 @@ int main(){
 			cout<<visit[i][j]<<" ";
 		cout<<endl;	
 	}*/
-		
-	cin>>sx>>sy>>fx>>fy;
+	
 	dfs(sx,sy);
 	cout<<sum<<endl;
 	return 0;
