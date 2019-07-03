@@ -26,5 +26,5 @@ int main(){
 			num--;
 		s++;	
 	}
-	cout<<ans<<endl;
+	printf("%d\n",ans);
 }
